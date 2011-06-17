@@ -7,8 +7,12 @@ My goal here is not to provide 100% parsed results and not enabled 100% of the o
 
 My goal is to provide other programmers with a starting point for working with the eBay API
 
+(send to git: git push -u origin master)
+
 API Calls
 ---------
 ebay_getebayofficetime.cfm --- the Hello World of dealing with the eBay API
 
-ebay_getcategories --- Pulls the categories from eBay
+ebay_getcategories --- Pulls the categories from eBay, remove CategoryParent to pull all categories, be warned it is a large return packet
+
+ebay_additem.cfm --- Creates a new item, verifies that the listing is valid and if valid posts the item to eBay's site for sale, there are a ton of options for the AddItem / VerifyAddItem requests, please read the documentation to add what you need.  What I have provided is a very basic eBay auction, however it should get you over the hump.
