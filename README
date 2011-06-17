@@ -10,3 +10,5 @@ My goal is to provide other programmers with a starting point for working with t
 API Calls
 ---------
 ebay_getebayofficetime.cfm --- the Hello World of dealing with the eBay API
+
+ebay_getcategories --- Pulls the categories from eBay
