@@ -1,0 +1,12 @@
+Author: John Ceci
+Email: tigeryan55@gmail.com
+
+Description:  After much pulling of hair and late nights I started making good progress on using eBay's API with ColdFusion and figured it was only fair to share.  I didn't find too much direct help when writing these, but without blog posts from Ben Nadel and insights from Ray Camden, this wouldn't be possible.
+
+My goal here is not to provide 100% parsed results and not enabled 100% of the options available.  
+
+My goal is to provide other programmers with a starting point for working with the eBay API
+
+API Calls
+---------
+ebay_getebayofficetime.cfm --- the Hello World of dealing with the eBay API
