@@ -36,7 +36,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 <cfset ebayXMLBody = xmlparse(ebayBody)>
 
 <cfhttp 
-	url="https://api.sandbox.ebay.com/wsapi?callname=#variables.methodToCall#&siteid=#variables.SiteID#&appid=#variables.AppID#&version=#variables.version#&Routing=#variables.routing#" 
+	url="#variables.endpoint#?callname=#variables.methodToCall#&siteid=#variables.SiteID#&appid=#variables.AppID#&version=#variables.version#&Routing=#variables.routing#" 
 	method="post" result="httpResponse">
 <cfhttpparam type="header" name="SOAPAction" value="#variables.methodToCall#"/>
 <cfhttpparam type="header" name="accept-encoding" value="no-compression" />
