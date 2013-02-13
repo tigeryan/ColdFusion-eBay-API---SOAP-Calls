@@ -40,7 +40,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <DetailLevel>ReturnAll</DetailLevel>
   <Version>#variables.version#</Version>
   <WarningLevel>High</WarningLevel>
-  <!--- rmeove categoryparent to return all categories --->
+  <!--- remove categoryparent to return all categories --->
   <CategoryParent>4707</CategoryParent>
 </GetCategoriesRequest>
 </cfoutput>

@@ -154,7 +154,7 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 <cfif result EQ "Success">
 
 	<cfset methodToCall = "AddItem" />
-	<!--- change the request packet from Verity to Add --->
+	<!--- change the request packet from Verify to Add --->
 	<cfset ebayBody = Replace(ebayBody,"VerifyAddItemRequest","AddItemRequest","ALL") />
 	<cfset ebayXMLBody = xmlparse(ebayBody)>
 	
