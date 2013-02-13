@@ -1,5 +1,6 @@
 Author: John Ceci
 Email: tigeryan55@gmail.com
+Hosted on GitHub https://github.com/tigeryan/ColdFusion-eBay-API---SOAP-Calls
 
 Description:  After much pulling of hair and late nights I started making good progress on using eBay's API with ColdFusion and figured it was only fair to share.  I didn't find too much direct help when writing these, but without blog posts from Ben Nadel and insights from Ray Camden, this wouldn't be possible.
 
