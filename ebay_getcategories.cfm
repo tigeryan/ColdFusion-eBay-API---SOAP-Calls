@@ -1,3 +1,13 @@
+<!---
+ebay_getcategories.cfm
+
+Example of how to use the eBay webservice to get a list of categories
+
+Developer: John Ceci
+Date: 2/13/2013
+
+--->
+
 <cfset endpoint="https://api.sandbox.ebay.com/wsapi">
 <cfset AppID="<<Your APPID>>">
 <cfset DevID="<<Your DEVID>>">
