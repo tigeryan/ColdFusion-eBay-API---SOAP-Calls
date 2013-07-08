@@ -8,15 +8,15 @@ Date: 2/13/2013
 
 --->
 
-<cfset endpoint="https://api.sandbox.ebay.com/wsapi">
-<cfset AppID="<<Your APPID>>">
-<cfset DevID="<<Your DEVID>>">
-<cfset CertID="<<Your CertID>>">
-<cfset eBayAuthToken="<<Your Auth Token>>">
-<cfset version="723">
-<cfset routing="default">
-<cfset SiteID=0>
-<cfset methodToCall = "geteBayOfficialTime">
+<cfset endpoint="https://api.sandbox.ebay.com/wsapi" />
+<cfset AppID="<<Your APPID>>" />
+<cfset DevID="<<Your DEVID>>" />
+<cfset CertID="<<Your CertID>>" />
+<cfset eBayAuthToken="<<Your Auth Token>>" />
+<cfset version="723" />
+<cfset routing="default" />
+<cfset SiteID=0 />
+<cfset methodToCall = "geteBayOfficialTime" />
 
 <cfsavecontent variable="ebayBody">
 <cfoutput>
@@ -43,15 +43,14 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 </cfoutput>
 </cfsavecontent>
 
-<cfset ebayXMLBody = xmlparse(ebayBody)>
+<cfset ebayXMLBody = XMLParse(ebayBody) />
 
 <cfhttp 
-	url="#variables.endpoint#?callname=#variables.methodToCall#&siteid=#variables.SiteID#&appid=#variables.AppID#&version=#variables.version#&Routing=#variables.routing#" 
-	method="post" result="httpResponse">
-<cfhttpparam type="header" name="SOAPAction" value="#variables.methodToCall#"/>
+	url="#variables.endpoint#?callname=#variables.methodToCall#&siteid=#variables.SiteID#&appid=#variables.AppID#&version=#variables.version#&Routing=#variables.routing#" method="post" result="httpResponse">
+<cfhttpparam type="header" name="SOAPAction" value="#variables.methodToCall#" />
 <cfhttpparam type="header" name="accept-encoding" value="no-compression" />
 <cfhttpparam type="xml" value="#trim(variables.ebayXMLBody)#" />
 </cfhttp>
 
-<cfdump var="#httpResponse#">
+<cfdump var="#httpResponse#" />
 
