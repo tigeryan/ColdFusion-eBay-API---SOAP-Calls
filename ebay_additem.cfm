@@ -135,20 +135,19 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 </soap:Envelope>
 </cfsavecontent>
 
-<cfset ebayXMLBody = xmlparse(ebayBody)>
+<cfset ebayXMLBody = XMLParse(ebayBody) />
 
-<cfhttp url="#endpoint#?callname=#methodToCall#&siteid=#SiteID#&appid=#AppID#&version=#version#&Routing=#routing#" 
-	method="post" result="httpResponse">
-	<cfhttpparam type="header" name="SOAPAction" value="VerifyAddItem"/>
+<cfhttp url="#endpoint#?callname=#methodToCall#&siteid=#SiteID#&appid=#AppID#&version=#version#&Routing=#routing#" method="post" result="httpResponse">
+	<cfhttpparam type="header" name="SOAPAction" value="VerifyAddItem" />
 	<cfhttpparam type="header" name="accept-encoding" value="no-compression" />
-	<cfhttpparam type="xml" value="#trim(ebayXMLBody)#" />
+	<cfhttpparam type="xml" value="#Trim(ebayXMLBody)#" />
 </cfhttp>
 
-<cfdump var="#httpResponse#">
+<cfdump var="#httpResponse#" />
 <cfset soapResponse = xmlParse(httpResponse.fileContent) />
-<cfdump var="#soapResponse#">
+<cfdump var="#soapResponse#" />
 
-<cfset responseNodes = xmlSearch(soapResponse,"//*[ local-name() = 'Ack' ]") />
+<cfset responseNodes = XMLSearch(soapResponse,"//*[ local-name() = 'Ack' ]") />
 <cfset result = responseNodes[1].XmlText />
 
 <cfif result EQ "Success">
@@ -156,16 +155,15 @@ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	<cfset methodToCall = "AddItem" />
 	<!--- change the request packet from Verify to Add --->
 	<cfset ebayBody = Replace(ebayBody,"VerifyAddItemRequest","AddItemRequest","ALL") />
-	<cfset ebayXMLBody = xmlparse(ebayBody)>
+	<cfset ebayXMLBody = XMLParse(ebayBody) />
 	
-	<cfhttp url="#endpoint#?callname=#methodToCall#&siteid=#SiteID#&appid=#AppID#&version=#version#&Routing=#routing#" 
-		method="post" result="httpResponse">
-		<cfhttpparam type="header" name="SOAPAction" value="AddItem"/>
+	<cfhttp url="#endpoint#?callname=#methodToCall#&siteid=#SiteID#&appid=#AppID#&version=#version#&Routing=#routing#" method="post" result="httpResponse">
+		<cfhttpparam type="header" name="SOAPAction" value="AddItem" />
 		<cfhttpparam type="header" name="accept-encoding" value="no-compression" />
-		<cfhttpparam type="xml" value="#trim(ebayXMLBody)#" />
+		<cfhttpparam type="xml" value="#Trim(ebayXMLBody)#" />
 	</cfhttp>
 
-	<cfdump var="#soapResponse#">
+	<cfdump var="#soapResponse#" />
 
 <cfelse>
 
