@@ -21,39 +21,39 @@ Date: 2/13/2013
 
 <cfsavecontent variable="ebayDesc">
 <div align="center">
-<table style="font-family:Arial;font-size:14px;padding:10px;" width="600" cellpadding="0" cellspacing="0" border="0">
-	<tr>
-		<td style="background-color:#FF0000;" colspan="3">LOGO HERE</td>
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>
-		<td style="padding:10px;"><h1 style="font-size:16px;">Product Title HEre</h1></td>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
-		<td align="center"><img src="http://<<product image here>>.jpg" /></td>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
-		<td style="padding:10px;">Condition: <strong>New In Package</strong></td>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
-		<td style="padding:10px;">Description: <<DESCRIPTION HERE >></td>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
-		<td style="padding:10px;">Ozzy customer friendly stuff here</td>
-		<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
-	</tr>
-	<tr>
-		<td style="background-color:#FF0000;" colspan="3">&nbsp;</td>
-	</tr>	
-</table>
+	<table style="font-family:Arial;font-size:14px;padding:10px;" width="600" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="background-color:#FF0000;" colspan="3">LOGO HERE</td>
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>
+			<td style="padding:10px;"><h1 style="font-size:16px;">Product Title HEre</h1></td>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
+			<td align="center"><img src="http://<<product image here>>.jpg" /></td>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
+			<td style="padding:10px;">Condition: <strong>New In Package</strong></td>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
+			<td style="padding:10px;">Description: <<DESCRIPTION HERE >></td>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>	
+			<td style="padding:10px;">Ozzy customer friendly stuff here</td>
+			<td style="background-color:#FF0000;width:4px;">&nbsp;</td>		
+		</tr>
+		<tr>
+			<td style="background-color:#FF0000;" colspan="3">&nbsp;</td>
+		</tr>	
+	</table>
 </div>
 </cfsavecontent>
 
